@@ -1,5 +1,5 @@
 Summary:	Plain Text to PostScript converter
-Summary(pl):	Konwerter czystego tekstu do PostScriptu
+Summary(pl.UTF-8):   Konwerter czystego tekstu do PostScriptu
 Name:		paps
 Version:	0.6.7
 Release:	1
@@ -18,8 +18,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 paps is a PostScript converter from plain text file using Pango.
 
-%description -l pl
-paps jest konwerterem czystego tekstu do PostScriptu za pomoc± Pango.
+%description -l pl.UTF-8
+paps jest konwerterem czystego tekstu do PostScriptu za pomocÄ… Pango.
 
 %prep
 %setup -q
