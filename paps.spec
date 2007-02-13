@@ -5,12 +5,14 @@ Version:	0.6.7
 Release:	1
 License:	LGPL
 Group:		Applications/Publishing
-URL:		http://paps.sourceforge.net/
 Source0:	http://dl.sourceforge.net/paps/%{name}-%{version}.tar.gz
+# Source0-md5:	0df929fe07d90cb01aa7e1700d5357ab
+URL:		http://paps.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pango-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define filterout_ld -Wl,--as-needed
@@ -20,6 +22,18 @@ paps is a PostScript converter from plain text file using Pango.
 
 %description -l pl.UTF-8
 paps jest konwerterem czystego tekstu do PostScriptu za pomocą Pango.
+
+%package devel
+Summary:	paps static library and header file
+Summary(pl.UTF-8):	Biblioteka statyczna i plik nagłówkowy paps
+Group:		Development/Libraries
+# doesn't require base
+
+%description devel
+paps static library and header file.
+
+%description devel -l pl.UTF-8
+Biblioteka statyczna i plik nagłówkowy paps.
 
 %prep
 %setup -q
@@ -42,8 +56,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING.LIB README TODO doxygen-doc/html
+%doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/paps
 %{_mandir}/man1/paps.1*
+
+%files devel
+%defattr(644,root,root,755)
+%doc doxygen-doc/html
 %{_includedir}/libpaps.h
 %{_libdir}/libpaps.a
