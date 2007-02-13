@@ -1,5 +1,5 @@
 Summary:	Plain Text to PostScript converter
-Summary(pl.UTF-8):   Konwerter czystego tekstu do PostScriptu
+Summary(pl.UTF-8):	Konwerter czystego tekstu do PostScriptu
 Name:		paps
 Version:	0.6.7
 Release:	1
