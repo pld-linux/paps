@@ -7,6 +7,7 @@ License:	LGPL
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/paps/%{name}-%{version}.tar.gz
 # Source0-md5:	0df929fe07d90cb01aa7e1700d5357ab
+Patch0:		%{name}-as-needed.patch
 URL:		http://paps.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -14,8 +15,6 @@ BuildRequires:	libtool
 BuildRequires:	pango-devel
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define filterout_ld -Wl,--as-needed
 
 %description
 paps is a PostScript converter from plain text file using Pango.
@@ -37,6 +36,7 @@ Biblioteka statyczna i plik nagłówkowy paps.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
