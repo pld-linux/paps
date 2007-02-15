@@ -1,0 +1,14 @@
+diff -Nur paps-0.6.7.orig/src/Makefile.am paps-0.6.7.as-needed/src/Makefile.am
+--- paps-0.6.7.orig/src/Makefile.am	2006-04-17 07:42:08.000000000 +0000
++++ paps-0.6.7.as-needed/src/Makefile.am	2007-02-15 17:59:57.000000000 +0000
+@@ -20,8 +20,7 @@
+ noinst_PROGRAMS = test_libpaps
+ 
+ 
+-test_libpaps_SOURCES = test_libpaps.c
+-test_libpaps_LDADD = $(lib_LIBRARIES) $(all_libraries)
++test_libpaps_SOURCES = test_libpaps.c libpaps.c
++test_libpaps_LDADD = $(all_libraries)
+ test_libpaps_LDFLAGS = `pkg-config --libs pangoft2`
+-test_libpaps_DEPENDENCIES = $(lib_LIBRARIES) 
+ 
