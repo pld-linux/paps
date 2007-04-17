@@ -1,12 +1,12 @@
 Summary:	Plain Text to PostScript converter
 Summary(pl.UTF-8):	Konwerter czystego tekstu do PostScriptu
 Name:		paps
-Version:	0.6.7
+Version:	0.6.8
 Release:	1
 License:	LGPL
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/paps/%{name}-%{version}.tar.gz
-# Source0-md5:	0df929fe07d90cb01aa7e1700d5357ab
+# Source0-md5:	e9508132bf27609bf2fded2bfd9cb3f1
 Patch0:		%{name}-as-needed.patch
 URL:		http://paps.sourceforge.net/
 BuildRequires:	autoconf
